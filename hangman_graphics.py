@@ -1,3 +1,11 @@
+import os
+
+def clear():
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
+
 def game_display():
     print("   |-------|    \n",
           "   |       |    \n",
@@ -70,7 +78,7 @@ def seven_wrong():
           "           |    \n",
           "       ____|____\n",sep="")
 
-def eight_wrong():
+def eight_wrong(word):
     print("   |-------|    \n",
           "   |       |    \n",
           "   0       |    \n",
@@ -79,7 +87,12 @@ def eight_wrong():
           "           |    \n",
           "       ____|____\n",sep="")
     print("you lost")
+    print("Your word was ",word)
     exit()
+
+
+def lost(word):
+    eight_wrong(word)
 
 
 def win():
