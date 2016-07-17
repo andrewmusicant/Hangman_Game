@@ -95,7 +95,7 @@ def lost(word):
     eight_wrong(word)
 
 
-def win():
+def win(single_word):
     print("""    |-------|
     |       |
             |
@@ -104,3 +104,4 @@ def win():
     |       |
   </ \>  ___|___ """)
     print("You Win")
+    print("Your word was", single_word.upper())
